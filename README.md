@@ -9,7 +9,7 @@ In order to create a module, add a JSON file describing your module into the mod
 
 ### Element [type=entity]
 The most advanced element of a module. In this element, you describe what you want to change by adding it to the ```replace``` and ```add``` objects or to the "remove" array.
-Order of execution: ```replace``` --> ```add``` --> ```remove```
+Order of execution: ```replace``` --> ```remove``` --> ```add```
 
 ```javascript
 {
