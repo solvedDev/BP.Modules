@@ -5,10 +5,10 @@ Modules allow Behavior Programmers to build up a library of knowledge to be easi
 Modules are fully integrated into the next version of MCPacker. You can access the module menu by pressing "ctrl+L" or by using the menubar.
 
 ## Creating modules
-In order to create a module, add a JSON file describing your module into the modules folder of this repository. You then need to add your module to the module_definitions.json file in this repository. Make sure to choose a descriptive name and add a good description.
+In order to create a module, add a JSON file describing your module into the modules folder of this repository. You then need to also add your module to the module_definitions.json file in this repository. Make sure to choose a descriptive name and add a good description.
 
 ### Element [type=entity]
-The most advanced element of a module. In this element, you describe what you want to change by adding it to the ```replace``` and ```add``` objects or to the ```remove``` array.
+The most advanced element in a module. In this element, you describe what you want to change by adding it to the ```replace``` and ```add``` objects or to the ```remove``` array.
 Order of execution: ```replace``` --> ```remove``` --> ```add```
 
 ```javascript
@@ -117,6 +117,17 @@ Define a command system by using the type ```commands```. The commands end up in
 					"command": "/say Found example...",
 					"type": "chain",
 					"is_conditional": true,
+					"description": "test_description"
+				}
+			]
+		},
+		{
+			"type": "commands",
+			"commands": [
+				{
+					"command": "/say Loaded",
+					"type": "impulse",
+					"is_conditional": false,
 					"description": "test_description"
 				}
 			]
