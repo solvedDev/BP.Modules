@@ -8,7 +8,7 @@ Modules are fully integrated into the next version of MCPacker. You can access t
 In order to create a module, add a JSON file describing your module into the modules folder of this repository. You then need to also add your module to the module_definitions.json file. Make sure to choose a descriptive name and add a good description.
 
 ### Element [type=entity]
-The most advanced element in a module. In this element, you describe what you want to change by adding it to the ```replace``` and ```add``` objects or to the ```remove``` array.
+The most advanced element in a module. In this element, you describe what you want to change by adding it to the ```replace``` and ```add``` objects or to the ```remove``` array. Every change made by the module system is reversible as a changelog file is generated. You can find the changelog for each module in your chosen behavior pack folder saved as a file with the name "changelog_{module name}.json".
 Order of execution: ```replace``` --> ```remove``` --> ```add```
 
 ```javascript
@@ -47,7 +47,7 @@ Order of execution: ```replace``` --> ```remove``` --> ```add```
 ```
 
 ###### Functionality of ```add```
-Add components, component_groups and events through the ```add``` object. If a ```component```/```event```/```component_group``` already exists on the entity chosen by the user, a merge conflict gets added to the merge_conflicts.json file (path: your_chosen_bp_path/merge_conflicts.json). You won't loose your ```component```/```event```/```component_group``` in this case.
+Add components, component_groups and events through the ```add``` object. If a ```component```/```event```/```component_group``` already exists on the entity chosen by the user, a change objects gets added to the changelog_{module name}.json file (path: your_chosen_bp_path/changelog_{module name}.json). You won't loose your ```component```/```event```/```component_group``` in this case.
 
 ###### Functionality of ```replace```
 ```replace``` currently replaces the whole ```components```/```events```/```component_groups``` object of the chosen entity with the one defined. If you want to start your module with a blank entity, this is the way to go...
