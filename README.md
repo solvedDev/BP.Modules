@@ -55,16 +55,51 @@ Add components, component_groups and events through the ```add``` object. If a `
 ###### Functionality of ```remove```
 Define within ```remove``` object which ```components```/```events```/```component_groups``` of the chosen entity shall be removed. Only the name is required! ```remove``` can currently NOT remove components in component_groups.
 
+
 ### Element [type=loot_table]
 Define a whole loot table to be imported upon loading the module in this element. The ```name``` attribute changes the name of the file. 
 Path of the loot table: loot_tables/{name}.json
+
+```javascript
+{
+	"elements": [
+		{
+			"type": "loot_table",
+			"name": "example loot",
+			"loot_table": {
+				"pools": [
+					"..."
+				]
+			}
+		}
+	]
+}
+```
+
 
 ### Element [type=trades]
 Define a whole trading table to be imported upon loading the module in this element. The ```name``` attribute changes the name of the file. 
 Path of the trading table: trading/{name}.json
 
+```javascript
+{
+	"elements": [
+		{
+			"type": "trades",
+			"name": "example trade",
+			"trades": {
+				"tiers": [
+					"..."
+				]
+			}
+		}
+	]
+}
+```
+
+
 ### Element [type=commands]
-Define a command system by using the type ```commands```. The commands get outputted into a commands.txt file after loading the module. This file should open by default (path: your_chosen_bp_path/commands.txt)
+Define a command system by using the type ```commands```. The commands end up in a commands.txt file after loading the module. This file should open by default (path: your_chosen_bp_path/commands.txt).
 
 ```javascript
 {
