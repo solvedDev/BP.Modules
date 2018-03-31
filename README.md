@@ -8,7 +8,7 @@ Modules are fully integrated into the next version of MCPacker. You can access t
 In order to create a module, add a JSON file describing your module into the modules folder of this repository. You then need to add your module to the module_definitions.json file in this repository. Make sure to choose a descriptive name and add a good description.
 
 ### Element [type=entity]
-The most advanced element of a module. In this element, you describe what you want to change by adding it to the ```replace``` and ```add``` objects or to the "remove" array.
+The most advanced element of a module. In this element, you describe what you want to change by adding it to the ```replace``` and ```add``` objects or to the ```remove``` array.
 Order of execution: ```replace``` --> ```remove``` --> ```add```
 
 ```javascript
