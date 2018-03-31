@@ -1,0 +1,7 @@
+[
+	{
+		"name": "Example",
+		"description": "A module to showcase the module_definitions file",
+		"path": "modules/example.json"
+	}
+]
