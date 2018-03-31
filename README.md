@@ -65,3 +65,27 @@ Path of the trading table: trading/{name}.json
 
 ### Element [type=commands]
 Define a command system by using the type ```commands```. The commands get outputted into a commands.txt file after loading the module. This file should open by default (path: your_chosen_bp_path/commands.txt)
+
+```javascript
+{
+	"elements": [
+		{
+			"type": "commands",
+			"commands": [
+				{
+					"command": "/testfor @e[type=example]",
+					"type": "repeating",
+					"is_conditional": false,
+					"description": "test_description"
+				},
+				{
+					"command": "/say Found example...",
+					"type": "chain",
+					"is_conditional": true,
+					"description": "test_description"
+				}
+			]
+		}
+	]
+}
+```
