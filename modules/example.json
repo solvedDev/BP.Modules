@@ -1,9 +1,9 @@
 {
 	"elements": [
 		{
-			"type": "example",
-			"name": "example_description",
-			"description": "Mark a location",
+			"type": "entity",
+			"name": "example",
+			"description": "example_description",
 
 			"replace": {
 				"components": {
