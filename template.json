@@ -34,10 +34,12 @@
 		{
 			"type": "commands",
 			"commands": [
-				"command": "",
-				"type": "impulse/chain/repeating",
-				"is_conditional": false,
-				"description": ""
+				{
+					"command": "",
+					"type": "impulse/chain/repeating",
+					"is_conditional": false,
+					"description": ""
+				}
 			]
 		}
 	]
