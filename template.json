@@ -1,0 +1,44 @@
+{
+	"elements": [
+		{
+			"type": "entity",
+			"name": "[descriptive name]",
+			"description": "[description here]",
+
+			"replace": {
+				"replace_group_by_group": false,
+				
+				"components": {
+				},
+				"component_groups": {
+				},
+				"events": {
+				}
+			},
+			"add": {
+				"components": {
+				},
+				"component_groups": {
+				},
+				"events": {
+				}
+			},
+			"remove": {
+				"parse_groups": false,
+				
+				"components": [ ],
+				"component_groups": [ ],
+				"events": [ ]
+			}
+		},
+		{
+			"type": "commands",
+			"commands": [
+				"command": "",
+				"type": "impulse/chain/repeating",
+				"is_conditional": false,
+				"description": ""
+			]
+		}
+	]
+}
