@@ -1,11 +1,13 @@
 [
 	{
 		"name": "Example",
+		"key": "gm1:example",
 		"description": "A module to showcase the module_definitions file",
 		"path": "modules/example.json"
 	},
 	{
 		"name": "SilentKill",
+		"key": "gm1:silent_kill",
 		"description": "Kill an entity without drops, particles, death animation and death sounds.",
 		"path": "modules/silent_kill.json"
 	}
