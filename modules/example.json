@@ -1,38 +1,42 @@
 {
-	"elements": [
-		{
-			"type": "entity",
-			"name": "example",
-			"description": "example_description",
+	"vars": {
+		"example_var": {
+			"description": "Example",
+			"default_value": ["Example"]
+		}
+	},
+	"component": {
+		"replace": {
+			"components": {
 
-			"replace": {
-				"components": {
-
-				},
-				"component_groups": {
-
-				},
-				"events": {
-
-				}
 			},
-			"add": {
-				"components": {
+			"component_groups": {
 
-				},
-				"component_groups": {
-
-				},
-				"events": {
-
-				}
 			},
-			"remove": {
-				"components": [ ],
-				"component_groups": [ ],
-				"events": [ ]
+			"events": {
+
 			}
-			
+		},
+		"add": {
+			"components": {
+
+			},
+			"component_groups": {
+
+			},
+			"events": {
+
+			}
+		},
+		"remove": {
+			"components": [ ],
+			"component_groups": [ ],
+			"events": [ ]
+		}
+	},
+	"elements": [
+		{	
+			"type": "loot_table"
 		},
 		{
 			"type": "commands",

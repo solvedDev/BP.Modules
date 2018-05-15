@@ -1,31 +1,32 @@
 {
-	"elements": [
-		{
-			"type": "entity",
-			"name": "Entitiy",
-			"description": "Call the event 'on_kill' to kill this entity without drops, particles, death animation and death sounds.",
-
-			"add": {
-				"components": {
-
-				},
-				"component_groups": {
-					"kill_entity": {
-						"minecraft:explode": {
-							"power": 0,
-							"fuseLength": 0,
-							"fuseLit": true
-						}
+	"vars": {
+		"kill_time": {
+			"description": "The time it takes until the entity dies.",
+			"default_value": [30]
+		},
+		"event": {
+			"description": "The event to start death.",
+			"default_value": "gm1:on_kill"
+		}
+	},
+	"component": {
+		"add": {
+			"component_groups": {
+				"kill_entity": {
+					"minecraft:explode": {
+						"power": 0,
+						"fuseLength": "$kill_time",
+						"fuseLit": true
 					}
-				},
-				"events": {
-					"on_kill": {
-						"add": {
-							"component_groups": [ "kill_entity" ]
-						}
+				}
+			},
+			"events": {
+				"$event": {
+					"add": {
+						"component_groups": [ "kill_entity" ]
 					}
 				}
 			}
 		}
-	]
+	}
 }
