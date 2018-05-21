@@ -1,4 +1,5 @@
 {
+	"version": [1, 0, 0],
 	"vars": {
 		"kill_time": {
 			"description": "The time it takes until the entity dies.",
