@@ -1,4 +1,5 @@
 {
+	"version": [0, 9, 0],
 	"vars": {
 		"example_var": {
 			"description": "Example",
